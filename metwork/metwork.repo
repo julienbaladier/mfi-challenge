@@ -1,0 +1,6 @@
+[metwork_stable]
+name=MetWork Repository Stable
+baseurl=http://metwork-framework.org/pub/metwork/releases/rpms/stable/portable/
+gpgcheck=0
+enabled=1
+metadata_expire=0

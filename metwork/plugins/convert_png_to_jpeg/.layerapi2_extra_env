@@ -1,0 +1,1 @@
+REDIS_SOCKET_UNIX_SOCKET_PATH={MFMODULE_RUNTIME_HOME}/var/redis_plugin_convert_png_to_jpeg.socket
