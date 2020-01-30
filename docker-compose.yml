@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+
+  registry:
+    image: library/registry:2.7.1
+    restart: always
+    ports:
+      - 5000:5000
+    volumes:
+      - registry-data-volume:/var/lib/registry
+
+  jenkins:
+    image: jb/jenkins:2.219-alpine
+    build: jenkins
+    restart: always
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jenkins-home-volume:/var/jenkins_home
+    env_file:
+      - jenkins/.env
+
+volumes:
+  registry-data-volume:
+  jenkins-home-volume:
